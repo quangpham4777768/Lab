@@ -12,7 +12,8 @@
       "backgroundColor": "#ffffff"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/9c613e40-52b6-4c6b-a8a4-3ddf6758c467"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -36,6 +37,9 @@
         "projectId": "9c613e40-52b6-4c6b-a8a4-3ddf6758c467"
       }
     },
-    "owner": "khunglongggg"
+    "owner": "khunglongggg",
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    }
   }
 }

@@ -15,10 +15,15 @@ export default function Scanner(){
         getBarCodeScannerPermissions();
     }, []);
     
-    const handleBarCodeScanned = ({ type, data }) => {
+    const handleBarCodeScanned = ({ data }) => {
         setScanned(true);
-        <Modal></Modal>
-        alert(`Bar code with type ${type} and data ${data} has been scanned!`);
+        if (data != '1912463'){
+            alert(`Dữ liệu không match`);
+        }
+        else{
+            alert(`BKNet ID ${data} có trong danh sách dữ liệu`);
+        }
+        
     };
 
     
@@ -35,7 +40,7 @@ export default function Scanner(){
         onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
         style={StyleSheet.absoluteFillObject}
         />
-        {scanned && <Button title={'Tap to Scan Again'} onPress={() => setScanned(false)} />}
+        {scanned && <Button title={'Bấm để Scan lại'} onPress={() => setScanned(false)} />}
     </View>
     ); 
 }

@@ -17,7 +17,8 @@
     "react-native": "0.69.6",
     "expo-barcode-scanner": "~11.4.0",
     "expo-face-detector": "~11.3.0",
-    "expo-camera": "~12.3.0"
+    "expo-camera": "~12.3.0",
+    "expo-updates": "~0.14.7"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
