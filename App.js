@@ -1,23 +1,32 @@
-import React from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import * as React from 'react';
+import { Button, View, Text } from 'react-native';
+
 import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import Home from './screens/Home';
+import Scanner from './screens/Scanner';
+
 const Stack = createNativeStackNavigator();
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
-    </View>
-  );
+
+function App(){
+  return(
+    <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Scanner" component={Scanner} />
+    </Stack.Navigator>
+  )
 }
 
-export default function App() {
+export default () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="login" component={HomeScreen} />
-        <Stack.Screen name="main" component={HomeScreen} />
-      </Stack.Navigator>
+      <App/>
     </NavigationContainer>
   );
-}
+} 
+
+
+
+
+
