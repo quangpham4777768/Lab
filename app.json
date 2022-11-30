@@ -20,6 +20,11 @@
     ],
     "ios": {
       "supportsTablet": true,
+      "splash": {
+        "image": "./assets/splash.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#ffffff"
+      },
       "bundleIdentifier": "com.khunglongggg.expocamera"
     },
     "android": {
